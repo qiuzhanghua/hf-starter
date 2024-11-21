@@ -22,7 +22,7 @@ python app.py
 set -x HF_HOME $HOME/ai/cache/huggingface
 set -x HUGGINGFACE_HUB_CACHE $HOME/ai/cache/huggingface/hub
 set -x HF_DATASETS_CACHE $HOME/ai/cache/huggingface/datasets
-set -x TRANSFORMERS_CACHE $HOME/ai/cache/huggingface/tranformers
+set -x TRANSFORMERS_CACHE $HOME/ai/cache/huggingface/transformers
 set -x HF_ENDPOINT https://hf-mirror.com
 
 set -x PATH /usr/local/cuda-12.4/bin $PATH
