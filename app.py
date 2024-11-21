@@ -4,7 +4,7 @@ import logging.config
 import os
 import click
 
-from utils.hf_cache import find_hf_hub_dir, find_hf_datasets_dir, find_hf_home_dir
+from utils.hf_cache import find_hf_hub_dir, find_hf_datasets_dir, find_hf_home_dir, find_transformers_dir
 from utils.ppu import device
 
 @click.command()
@@ -23,6 +23,7 @@ def main(epochs):
     logger.info(f"Hugging Face Home Dir: {find_hf_home_dir()}")
     logger.info(f"Hugging Face Hub Dir: {find_hf_hub_dir()}")
     logger.info(f"Hugging Face Datasets Dir: {find_hf_datasets_dir()}")
+    logger.info(f"Hugging Face Transformers Dir: {find_transformers_dir()}")
     logger.info(f"Default Device: {device}")
     logger.info(f"epochs: {epochs}")
     logger.info("begin raining ...")
