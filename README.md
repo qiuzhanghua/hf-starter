@@ -2,7 +2,7 @@
 
 ## Requirement
 
-'''bash
+```bash
 pip i -r requirements.txt
 ```
 
