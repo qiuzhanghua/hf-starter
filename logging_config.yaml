@@ -22,10 +22,10 @@ handlers:
 
 loggers:
   app:
-    handlers: [console, file]
+    handlers: [ console, file ]
     level: DEBUG
   utils:
-    handlers: [console, file]
+    handlers: [ console, file ]
     level: DEBUG
 
 disable_existing_loggers: false

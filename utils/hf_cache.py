@@ -9,7 +9,6 @@ def find_hf_home_dir() -> str | None:
 
     logger = logging.getLogger(__name__)
 
-    result = None
     if "HF_HOME" in os.environ:
         result = os.environ["HF_HOME"]
         if os.path.exists(result) and os.path.isdir(result):
@@ -23,6 +22,7 @@ def find_hf_home_dir() -> str | None:
         logger.warning(f"Invalid default HuggingFace home directory: {result}")
     return None
 
+
 def find_hf_hub_dir() -> str | None:
     """
     Find the huggingface hub cache directory.
@@ -32,7 +32,6 @@ def find_hf_hub_dir() -> str | None:
 
     logger = logging.getLogger(__name__)
 
-    result = None
     if "HUGGINGFACE_HUB_CACHE" in os.environ:
         result = os.environ["HUGGINGFACE_HUB_CACHE"]
         if os.path.exists(result) and os.path.isdir(result):
@@ -52,6 +51,7 @@ def find_hf_hub_dir() -> str | None:
         logger.warning(f"Invalid default HuggingFace Hub directory: {result}")
     return None
 
+
 def find_hf_datasets_dir() -> str | None:
     """
     Find the huggingface datasets cache directory.
@@ -61,7 +61,6 @@ def find_hf_datasets_dir() -> str | None:
 
     logger = logging.getLogger(__name__)
 
-    result = None
     if "HF_DATASETS_CACHE" in os.environ:
         result = os.environ["HF_DATASETS_CACHE"]
         if os.path.exists(result) and os.path.isdir(result):
@@ -91,7 +90,6 @@ def find_transformers_dir() -> str | None:
 
     logger = logging.getLogger(__name__)
 
-    result = None
     if "TRANSFORMERS_CACHE" in os.environ:
         result = os.environ["TRANSFORMERS_CACHE"]
         if os.path.exists(result) and os.path.isdir(result):
@@ -110,7 +108,6 @@ def find_transformers_dir() -> str | None:
     else:
         logger.warning(f"Invalid default HuggingFace transformers directory: {result}")
     return None
-
 
 # HF_HOME                 ~/.cache/huggingface
 # HUGGINGFACE_HUB_CACHE   ~/.cache/huggingface/hub

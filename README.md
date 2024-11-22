@@ -17,8 +17,8 @@ pip i -r requirements.txt
 python app.py
 ```
 
-
 ## Sample envs set by fish shell
+
 ```fish
 set -x HF_HOME $HOME/ai/cache/huggingface
 set -x HUGGINGFACE_HUB_CACHE $HOME/ai/cache/huggingface/hub
@@ -35,13 +35,18 @@ else
 ```
 
 ## download datasets
+
 python
+
 ```python
- from datasets import load_dataset
- dataset = load_dataset('squad', download_mode='force_redownload')
- # download to HF_DATASETS_CACHE
+from datasets import load_dataset
+
+dataset = load_dataset('squad', download_mode='force_redownload')
+# download to HF_DATASETS_CACHE
  ```
+
 huggingface cli
+
 ```bash
 huggingface-cli download --repo-type dataset wikitext
 huggingface-cli download --repo-type dataset zalando-datasets/fashion_mnist
