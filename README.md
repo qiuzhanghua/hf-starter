@@ -2,8 +2,9 @@
 
 ## Requirement
 
-- pytorch
-- click
+'''bash
+pip i -r requirements.txt
+```
 
 ## Features
 

@@ -26,7 +26,7 @@ def main(epochs):
     logger.info(f"Hugging Face Transformers Dir: {find_transformers_dir()}")
     logger.info(f"Default Device: {device}")
     logger.info(f"epochs: {epochs}")
-    logger.info("begin raining ...")
+    logger.info("begin training ...")
     for i in range(epochs):
         logger.info(f"Epoch {i+1}/{epochs}")
     logger.info("end training.")
