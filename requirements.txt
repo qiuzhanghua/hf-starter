@@ -1,3 +1,4 @@
-torch;
-click;
-huggingface_hub[cli];
+huggingface_hub[cli]
+torch
+pyyaml
+click
