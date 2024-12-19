@@ -5,7 +5,7 @@ import os
 import click
 import yaml
 
-from utils.hf_cache import find_hf_hub_dir, find_hf_datasets_dir, find_hf_home_dir, find_transformers_dir
+from utils.hf_cache import find_hf_hub_dir, find_hf_datasets_dir, find_hf_home_dir
 from utils.ppu import device
 
 
@@ -16,7 +16,7 @@ def main(epochs):
     log_dir = os.path.join(os.path.dirname(current_file_path), "logs")
     if not os.path.exists(log_dir):
         os.makedirs(log_dir)
-    with open("logging_config.yaml", "r", encoding="utf8") as f:
+    with open("config/logging.yaml", "r", encoding="utf8") as f:
         logging_config = yaml.safe_load(f)
         logging.config.dictConfig(logging_config)
         logger = logging.getLogger("app")
@@ -24,7 +24,6 @@ def main(epochs):
     logger.info(f"Hugging Face Home Dir: {find_hf_home_dir()}")
     logger.info(f"Hugging Face Hub Dir: {find_hf_hub_dir()}")
     logger.info(f"Hugging Face Datasets Dir: {find_hf_datasets_dir()}")
-    logger.info(f"Hugging Face Transformers Dir: {find_transformers_dir()}")
     logger.info(f"Default Device: {device}")
     logger.info(f"epochs: {epochs}")
     logger.info("begin training ...")
