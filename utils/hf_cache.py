@@ -1,5 +1,6 @@
 # Description: Cache utilities for huggingface.
 
+
 def find_hf_home_dir() -> str | None:
     """
     Find the huggingface home directory.
@@ -83,6 +84,7 @@ def find_hf_datasets_dir() -> str | None:
         logger.warning(f"Invalid default HuggingFace datasets directory: {result}")
     return None
 
+
 def find_xdg_cache_home() -> str | None:
     """
     Find the XDG cache directory.
@@ -106,12 +108,14 @@ def find_xdg_cache_home() -> str | None:
         logger.warning(f"Invalid default XDG cache directory: {result}")
     return None
 
+
 # HF_HOME                 ~/.cache/huggingface
 # HUGGINGFACE_HUB_CACHE   ~/.cache/huggingface/hub
 # HF_DATASETS_CACHE       ~/.cache/huggingface/datasets
 # TRANSFORMERS_CACHE      ~/.cache/huggingface/transformers
 # TRANSFORMERS_CACHE is deprecated, use `HF_HOME` instead.
 # XDG_CACHE_HOME          ~/.cache
+
 
 def find_model_dir(model: str) -> str | None:
     """
@@ -162,6 +166,7 @@ def find_model_dir(model: str) -> str | None:
         return None
 
     return lfs_dir
+
 
 def find_datasets_dir(datasets: str) -> str | None:
     """

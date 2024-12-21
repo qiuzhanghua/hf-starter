@@ -32,5 +32,5 @@ def main(epochs):
     logger.info("end training.")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
