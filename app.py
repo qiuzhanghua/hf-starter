@@ -4,9 +4,17 @@ import os
 
 import click
 import yaml
+import torch
 
-from utils.hf_cache import find_hf_hub_dir, find_hf_datasets_dir, find_hf_home_dir
-from utils.ppu import device
+from tjutil import find_hf_hub_dir, find_hf_datasets_dir, find_hf_home_dir
+
+device = (
+    "cuda"
+    if torch.cuda.is_available()
+    else "mps"
+    if torch.backends.mps.is_available()
+    else "cpu"
+)
 
 
 @click.command()
